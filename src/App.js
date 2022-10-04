@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Weather from './components/Weather';
+import TodaysDate from './components/TodaysDate';
+import Time from './components/Time';
+import Quotes from './components/Quotes';
+// import Transit from './components/Transit';
+// import AosPractice from './components/AosPractice';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="min-h-screen p-3 flex flex-col justify-between">
+          <div className='md:w-11/12 md:mx-auto justify-self-start flex justify-between items-center p-2 m-2'>
+            <Weather/>
+            <TodaysDate />
+          </div>
+          <Time />
+          <div className='justify-self-end flex space-y-6 md:py-6 md:h-80 flex-col justify-center'>
+            <Quotes/>
+          </div>
+      </div>
+      <div>
+        {/* <Transit /> */}
+      </div>
+      <div>
+        {/* <AosPractice /> */}
+      </div>
     </div>
   );
 }
