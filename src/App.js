@@ -3,6 +3,7 @@ import Weather from './components/Weather';
 import TodaysDate from './components/TodaysDate';
 import Time from './components/Time';
 import Quotes from './components/Quotes';
+import TradeMark from './components/TradeMark';
 // import Transit from './components/Transit';
 // import AosPractice from './components/AosPractice';
 
@@ -19,12 +20,7 @@ function App() {
           <div className='justify-self-end flex space-y-6 md:py-6 md:h-80 flex-col justify-center'>
             <Quotes/>
           </div>
-      </div>
-      <div>
-        {/* <Transit /> */}
-      </div>
-      <div>
-        {/* <AosPractice /> */}
+        <TradeMark />
       </div>
     </div>
   );

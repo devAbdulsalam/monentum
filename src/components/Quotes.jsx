@@ -1,4 +1,4 @@
-// import axios from 'axios'
+import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 
 const url = 'https://goquotes-api.herokuapp.com/api/v1/random?count=1'
@@ -7,23 +7,29 @@ const Quotes = () => {
     const [data, setData] = useState('')
     // const [loading, setLoading] = useState('')
 
-    const getQoutes = () =>{
-        setData(() =>{
-          fetch(url)
-          .then((response) => response.json())
-          .then(data => console.log(data))
-          .catch(err => {
-            console.log(err);
-          })
-        })
-      }
+    // const getQoutes = () =>{
+    //     setData(() =>{
+    //       fetch(url)
+    //       .then((response) => response.json())
+    //       .then(data => console.log(data))
+    //       .catch(err => {
+    //         console.log(err);
+    //       })
+    //     })
+    //   }
       //   getQoutes()
-      
-      useEffect(() => {
-        setInterval(() => {
-            setData(() => getQoutes())
-          }, 3000);
-  },[data])
+      useEffect(() =>{
+        axios.get(url).then((response) =>{
+            setData(response.data)
+        }).catch((error) => console.log(error))
+    }, [])
+
+    if(!data) return null
+  //     useEffect(() => {
+  //       setInterval(() => {
+  //           setData(() => getQoutes())
+  //         }, 3000);
+  // },[data])
         
 
     // if(!data){
