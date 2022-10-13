@@ -10,7 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   /* BACKGROUNG IMAGE FROM UNSPLASH  */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://source.unsplash.com/featured/?nature);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(https://source.unsplash.com/featured/?nature);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

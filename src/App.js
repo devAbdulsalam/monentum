@@ -1,28 +1,19 @@
 // import './App.css';
-import Weather from './components/Weather';
-import TodaysDate from './components/TodaysDate';
-import Time from './components/Time';
-import Quotes from './components/Quotes';
-import TradeMark from './components/TradeMark';
-// import Transit from './components/Transit';
-// import AosPractice from './components/AosPractice';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Welcome from './components/Welcome';
+import Home from './components/Home';
+import Error from './components/Error';
 
 
 function App() {
   return (
-    <div>
-      <div className="min-h-screen p-3 flex flex-col justify-between">
-          <div className='md:w-11/12 md:mx-auto justify-self-start flex justify-between items-center p-2 m-2'>
-            <Weather/>
-            <TodaysDate />
-          </div>
-          <Time />
-          <div className='justify-self-end flex space-y-6 md:py-6 md:h-80 flex-col justify-center'>
-            <Quotes/>
-          </div>
-        <TradeMark />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route  path='/' element={<Welcome />} />
+        <Route  path='/home' element={<Home/>} />
+        <Route  path='*' element={<Error/>} />
+      </Routes>
+  </Router>
   );
 }
 
