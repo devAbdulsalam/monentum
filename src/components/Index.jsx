@@ -6,7 +6,7 @@ import Quotes from './Quotes';
 import TradeMark from './TradeMark';
 import {motion} from 'framer-motion'
 
-const Home = () => {
+const Index = () => {
   return (
     <motion.div initial={{width : 0}} animate={{width : '100%', transition : "1s"}} exit={{x: window.innerWidth, transition : "1s"}} >
       <div className="min-h-screen p-3 flex flex-col justify-between">
@@ -24,4 +24,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Index

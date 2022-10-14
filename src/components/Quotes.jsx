@@ -24,7 +24,7 @@ const Quotes = () => {
     } 
 
   return (
-    <motion.div initial={{width : "100%"}} animate={{width : '100%'}}  className='text-center md:w-6/12 m-auto my-2'>
+    <motion.div initial={{opacity : 0}} animate={{opacity : 1 }}  className='text-center md:w-6/12 m-auto my-2'>
         <p className='text-xl font-bold m-3'>{data.quotes[0].text}</p>
         <p className='text-2xl font-bold text-gray-50 animate-bounce'>"{data.quotes[0].author}"</p>
     </motion.div>
