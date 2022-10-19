@@ -23,7 +23,7 @@ const Form = () => {
       }else{
         setUserName(userName)
         localStorage.setItem("userName", name)
-        navigate("/home")
+        navigate("/index")
       }
     }
     const alertVariants = {

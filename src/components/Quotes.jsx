@@ -1,6 +1,7 @@
 // import axios from 'axios'
 import React, {useState, useEffect} from 'react'
 import {motion} from 'framer-motion'
+import SyncLoader from 'react-spinners/SyncLoader'
 
 const url = 'https://goquotes-api.herokuapp.com/api/v1/random?count=1'
 
@@ -19,7 +20,9 @@ const Quotes = () => {
 
     if(isLoading){
       return (
-      <h2 className='text-center' >Loading ...</h2>
+        <div className="text-center">
+          <SyncLoader  color="#36d7b7" size={8}  />
+        </div>
       )
     } 
 
