@@ -4,7 +4,6 @@ import {motion} from 'framer-motion'
 import SyncLoader from 'react-spinners/SyncLoader'
 import axios from "axios";
 
-// const url = 'https://goquotes-api.herokuapp.com/api/v1/random?count=1'
 const options = {
             method: 'POST',
             url: 'https://motivational-quotes1.p.rapidapi.com/motivation',
@@ -41,7 +40,7 @@ const Quotes = () => {
   return (
     <motion.div initial={{opacity : 0}} animate={{opacity : 1 }}  className='text-center md:w-6/12 m-auto my-2'>
         <p className='text-xl font-bold m-3'>{quote}</p>
-        <p className='text-2xl font-bold text-gray-50 animate-bounce'>"{}"</p>
+        {/* <p className='text-2xl font-bold text-gray-50 animate-bounce'>{quote.author}</p> */}
     </motion.div>
   )
 }

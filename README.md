@@ -6,6 +6,11 @@ Live display of weather condition of your location, time, date and enrich Qoute 
 
 # live_link: [https://dmomentum.netlify.app]
 
+# APIs
+
+- [https://motivational-quotes1.p.rapidapi.com/motivation]
+- [https://api.openweathermap.org]
+
 # Image
 
 ## Available Scripts
