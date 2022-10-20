@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# About
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live display of weather condition of your location, time, date and enrich Qoute to brighten your Day.
+
+# github_link: [https://github.com/devAbdulsalam/monentum.git]
+
+# live_link: [https://dmomentum.netlify.app]
+
+# Image
 
 ## Available Scripts
 

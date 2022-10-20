@@ -14,15 +14,6 @@ const Welcome = () => {
   let navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false);
 
-    // const loadpage = () =>{setTimeout(() => {
-    //         navigate("/home")
-    //     }, 10000);
-    // }
-    // const stopLoading = () => {clearTimeout(loadpage);}
-    // useEffect(() => {
-    //     loadpage()
-    //     stopLoading()
-    // });
   const circleVariants = {
     hidden: {
       scale: 0,
@@ -43,12 +34,13 @@ const Welcome = () => {
   useEffect (() =>{
     if(User === false){
       // console.log('User is false')
-      setActiveUser(true)
+      setActiveUser(() => true)
     }else if(User === ''){
         // console.log('User is true')
-        setActiveUser(false)
+        setActiveUser(() =>false)
     }
-  }, [User])
+  
+  }, [User, setActiveUser])
 
 
   const closeWelcome = () => {

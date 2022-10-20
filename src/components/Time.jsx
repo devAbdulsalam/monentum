@@ -6,10 +6,13 @@ import {LocalStorage} from './LocalStorage'
 
 const Time = () => {
   const User = LocalStorage()
-  const [userName, setUserName] = useState('')
+  // const getFromLocalStorage = () => {
+  //   return ;
+  // }
+  const [userName, setUserName] = useState("");
 
   useEffect(() =>{
-    setUserName(User)
+    setUserName(() => User.name)
   },[User])
   let now = new Date()
     const greeting = () => {

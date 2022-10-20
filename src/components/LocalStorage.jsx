@@ -3,7 +3,7 @@ import { useState, useEffect} from 'react'
 export const LocalStorage = () => {
     const [userName, setUserName] = useState('')
     const getlocalStorage= () => {
-        const fromLocal = localStorage.getItem("userName");
+        const fromLocal = JSON.parse(localStorage.getItem("momentumUser"));
         if (fromLocal === null) {
             return false
         } else {
@@ -12,7 +12,7 @@ export const LocalStorage = () => {
     }
     
     useEffect (() =>{
-        setUserName(getlocalStorage())
-    },[userName])
+        setUserName(() => getlocalStorage())
+    },[])
   return userName
 }
