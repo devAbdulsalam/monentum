@@ -17,10 +17,7 @@ code {
     monospace;
 }
 .welcome{
-  background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(https://source.unsplash.com/featured/?nature);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .2)), url(https://source.unsplash.com/featured/?nature);
 }
 .overlay{
   background-color: rgba(0, 0, 0, .4);
