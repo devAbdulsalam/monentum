@@ -53,7 +53,7 @@ const Welcome = () => {
   return (<motion.div variants={circleVariants}
         initial='visible'
         animate={isOpen ? 'hidden' : 'visible'} 
-        className='absolute h-screen w-screen flex justify-center items-center welcome bg-no-repeat bg-cover bg-center top-0 right-0'>
+        className='absolute h-full w-full flex justify-center items-center welcome bg-no-repeat bg-cover bg-center top-0 right-0'>
                 <div className='flex justify-center flex-col px-3 md:w-3/6 text-center'>
                     <h2 className='text-3xl m-3'>Welcome to Momentum</h2>
                     <p className='text-2xl'>We provide you with insprational, enlighten and amazing quotes to brighten you day,
