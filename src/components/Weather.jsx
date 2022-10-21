@@ -13,7 +13,7 @@ const Weather = () => {
             setData(() => response.data)
         }).catch((error) => console.log(error))
     }, [momentumUser])
-    console.log(momentumUser.location)
+    // console.log(momentumUser.location)
 
   if(!data)  return <SyncLoader  color="#36d7b7" size={8} /> 
   return (

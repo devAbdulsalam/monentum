@@ -8,6 +8,7 @@ import Form from './Form'
 
 // import framer
 import { motion } from 'framer-motion';
+import TradeMark from './TradeMark';
 
  
 const Welcome = () => { 
@@ -61,15 +62,7 @@ const Welcome = () => {
                     {activeUser && <Form/>}
                     {activeUser ? '' : <button onClick={closeWelcome} className='bg-green-500 hover:bg-green-600 rounded-md p-2 m-4 text-center w-40 mx-auto cursor-pointer'>Get Started</button>}
                   </div>
-                  <div className="fixed w-full bottom-0">
-                    <div className="text-center p-6 bg-gray-500 font-semibold">
-                      <span>© <span>{new Date().getFullYear().toString()}</span> Copyright : </span>
-                      <a  className="text-blue-900 font-semibold" href="https://devabdulsalam.netlify.app" target="_blank" rel='noreferrer'>Dev.Abdulsalm.js</a>
-                      <a href="https://twitter.com/MMAbdulsalam001" target="_blank" rel='noreferrer' className="mx-2 twitter"><i className="text-blue-700 fas fa fa-twitter "></i></a>
-                      <a href="https://github.com/devAbdulsalam" target="_blank" rel='noreferrer' className="mx-2 github"><i className="fas fa fa-github"></i></a>
-                      <a href="https://www.linkedin.com/in/abdulsalammmuftua/" target="_blank" rel='noreferrer' className="mx-2 text-white linkedin"><i className="fas fa fa-linkedin"></i></a>
-                    </div>
-                </div>
+                  <TradeMark />
               </motion.div>
   )
 }
