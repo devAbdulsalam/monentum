@@ -13,6 +13,8 @@ Live display of weather condition of your location, time, date and enrich Qoute 
 
 # Image
 
+![](./src/assets/momentum.jpeg.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:
