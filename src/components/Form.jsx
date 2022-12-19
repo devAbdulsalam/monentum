@@ -17,8 +17,8 @@ const Form = () => {
           setAlert('invisible')
         }, 2000);
       }else{
-        const person = {name, location};
-        localStorage.setItem("momentumUser",JSON.stringify(person))
+        const user = {name, location};
+        localStorage.setItem("momentumUser",JSON.stringify(user))
         navigate("/index")
       }
     }

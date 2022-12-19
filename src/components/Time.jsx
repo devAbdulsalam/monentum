@@ -1,14 +1,12 @@
 import React, { useState, useEffect} from 'react'
 import Moment from 'react-moment'
 import 'moment-timezone'
+import TodaysDate from './TodaysDate';
 // UserName
 import {LocalStorage} from './LocalStorage'
 
 const Time = () => {
   const User = LocalStorage()
-  // const getFromLocalStorage = () => {
-  //   return ;
-  // }
   const [userName, setUserName] = useState("");
 
   useEffect(() =>{
@@ -28,7 +26,10 @@ const Time = () => {
     }
   return (
     <div className='text-center' >
-        <p className='text-6xl md:text-9xl p-2 m-2'><Moment format='LT'></Moment></p>
+        <div className='text-6xl md:text-9xl p-2 m-2'>
+          <Moment format='LT'></Moment>
+          <TodaysDate />
+        </div>
         <p className='text-xl font-semi-bold text-white'>{greeting()}</p>
     </div>
   )

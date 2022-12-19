@@ -1,9 +1,7 @@
-import React, { useState, useEffect} from 'react'
-
-// localStorage
-import {LocalStorage} from './LocalStorage'
+import React, { useState, useContext} from 'react'
 
 import {useNavigate } from 'react-router-dom';
+import {AuthContext} from './AuthContext'
 import Form from './Form'
 
 // import framer
@@ -14,6 +12,7 @@ import TradeMark from './TradeMark';
 const Welcome = () => { 
   let navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false);
+  const {activeUser} = useContext(AuthContext)
 
   const circleVariants = {
     hidden: {
@@ -29,25 +28,11 @@ const Welcome = () => {
     },
   };
 
-
-  const User = LocalStorage()
-  const [activeUser, setActiveUser] = useState(false)
-  useEffect (() =>{
-    if(User === false){
-      // console.log('User is false')
-      setActiveUser(() => true)
-    }else if(User === ''){
-        // console.log('User is true')
-        setActiveUser(() =>false)
-    }
-  
-  }, [User, setActiveUser])
-
-
   const closeWelcome = () => {
     setIsOpen(false)
     setTimeout(() => {
         navigate("/index")
+        
     }, 100);
   }
 
@@ -59,8 +44,8 @@ const Welcome = () => {
                     <h2 className='text-3xl m-3'>Welcome to Momentum</h2>
                     <p className='text-2xl'>We provide you with insprational, enlighten and amazing quotes to brighten you day,
                     making it as productive, energetic and motivated as possible</p>
-                    {activeUser && <Form/>}
-                    {activeUser ? '' : <button onClick={closeWelcome} className='bg-green-500 hover:bg-green-600 rounded-md p-2 m-4 text-center w-40 mx-auto cursor-pointer'>Get Started</button>}
+                    {!activeUser ? <Form/> : ""}
+                    {!activeUser ? '' : <button onClick={closeWelcome} className='bg-green-500 hover:bg-green-600 rounded-md p-2 m-4 text-center w-40 mx-auto cursor-pointer'>Get Started</button>}
                   </div>
                   <TradeMark />
               </motion.div>
